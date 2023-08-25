@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Align items to the top */
+    height: 100vh;
+
+    flex-direction: column;
+}
+
+#task {
+    width: 25%;
+    height: 10vh;
+    background-color: rgb(196, 223, 246);
+    margin-top: 20px;
+    margin-left: 40%;
+    /* Add margin from the top */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#task h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* #list{
+    width: auto;
+    height: 67%;
+    background-color: aqua;
+    margin-top: 110px;
+    border-radius: 20px;
+} */
+
+ul {
+    margin-top: 10px;
+    padding: 0;
+    margin-left: 40%;
+    width: 25%;
+    list-style: none;
+
+
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    /* border-radius: 20px; */
+    margin-bottom: 10px;
+    
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #a1a0a0;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+}
+
+/* Dark color on click and strikethrough text */
+ul li.checked {
+    background: #4ac74a;
+    color: #000000;
+    text-decoration: line-through;
+}
+
+
+/* Checked Mark on clicking */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+
+/* Adding and styling the X/close Button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: red;
+    color: wheat;
+}
+
+/* Style the input */
+input {
+    margin-left: 12px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 65%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    
+}
+
+
+/* Styling the AddTodo Btn */
+
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #6272e9;
+    color: #ffffff;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+
+}
+
+
+/*Dark/Light Mode button styling*/
+
+button#color-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    border-radius: 10px;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    cursor: pointer;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+button#color-toggle:hover {
+    background-color: #0056b3;
+    /* Button background color on hover */
+}
